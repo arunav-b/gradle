@@ -13,7 +13,9 @@ Gradle automates **building**, **testing**, and **deployment** of software from 
 - **Dependency Management** is an automated technique for declaring and resolving external resources required by a project.
 - **Tasks** are a basic unit of work such as compiling code or running test. Each project contains one or more tasks defined inside a build script or a plugin.
 - **Plugins** are used to extend Gradle's capability and optionally contribute tasks to a project.
-  
+
+<br>
+
 ## Gradle Project structure
 
 ```yaml
@@ -33,6 +35,8 @@ project
     ├── build.gradle(.kts)              
     └── src                             
 ```
+
+<br>
  
 ## Understanding Tasks
 - Gradle runs on tasks
