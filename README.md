@@ -222,6 +222,42 @@ Many times, a task requires another task to run first. For example, for Gradle t
 
 ## Plugin Basics
 
+Plugins are used to extend build capabilities and customize Gradle.
+
+- Most features, like the ability to compile Java code, are added by plugins. Using plugins is also the primary mechanism for organizing build logic.
+- Plugins can provide useful tasks with capabilities such as running code, creating documentation, setting up source files, publishing archives, etc.
+
+For example:
+
+- The Spring Boot Gradle Plugin, `org.springframework.boot`, provides Spring Boot support.
+- The Google Services Gradle Plugin,` com.google.gms:google-services`, enables Google APIs and Firebase services in your Android application.
+- The Gradle Shadow Plugin, `com.github.johnrengelman.shadow`, is a plugin that generates fat/uber JARs with support for package relocation.
+
+```gradle
+plugins {
+    id «plugin id» version «plugin version» [apply «false»]
+}
+```
+
+Plugins are distributed in three ways:
+- **Core** plugins - Gradle develops and maintains a set of Core Plugins.
+```gradle
+plugins {
+    id("java")
+}
+```  
+- **Community** plugins - Gradle’s community shares plugins via the Gradle Plugin Portal.
+```gradle
+plugins {
+    id("org.springframework.boot") version "3.1.5"
+}
+```  
+- **Local** plugins - Gradle enables users to create custom plugins using APIs.
+
+
+
+[Read more](https://docs.gradle.org/current/userguide/custom_plugins.html#custom_plugins)
+
 <br>
 
 ## Build phases in Gradle:
