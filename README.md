@@ -204,6 +204,26 @@ We can view dependency tree in the terminal using the following command:
 
 <br>
 
+## Task Basics
+
+A task represents some independent unit of work that a build performs, such as compiling classes, creating a JAR, generating Javadoc, or publishing archives to a repository.
+To get the list of tasks we can execute the following command
+
+```gradle
+$ ./gradlew tasks
+```
+
+### Task Dependency
+Many times, a task requires another task to run first. For example, for Gradle to execute the `build` task, the Java code must first be compiled. Thus, the `build` task _depends_ on the `compileJava` task.
+
+[Read more](https://docs.gradle.org/current/userguide/more_about_tasks.html)
+
+<br>
+
+## Plugin Basics
+
+<br>
+
 ## Build phases in Gradle:
 - Initialization
 - Configuration
@@ -221,8 +241,4 @@ We can view dependency tree in the terminal using the following command:
 
 ## Build Java Project
 ## Build Kotlin Project
-## Dependency Management
-## Multi-module build
 ## Testing using Gradle
-## Gradle Wrapper
-It is used to execute a particular version of gradle
