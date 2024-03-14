@@ -1,4 +1,39 @@
 # Gradle
+
+Gradle automates **building**, **testing**, and **deployment** of software from information in build scripts.
+
+![gradle-basic-1](https://github.com/arunav-b/gradle/assets/44658033/3c5fcd99-4c86-4e0b-b85c-deac4f409fce)
+
+## Core Concepts
+
+- A Gradle **Project** is a piece of software (application or library) that can be built.
+  - Single project builds include a single project called root project.
+  - Multi-project builds include one root project and any number of subprojects. 
+- **Build Scripts** detail to Gradle what steps to take to build a project. Each project can have one or more build scripts.
+- **Dependency Management** is an automated technique for declaring and resolving external resources required by a project.
+- **Tasks** are a basic unit of work such as compiling code or running test. Each project contains one or more tasks defined inside a build script or a plugin.
+- **Plugins** are used to extend Gradle's capability and optionally contribute tasks to a project.
+  
+## Gradle Project structure
+
+```yaml
+project
+├── gradle                                  # Gradle directory to store wrapper files and more                 
+│   ├── libs.versions.toml                  # Gradle version catalog for dependency management
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew                                 # Gradle wrapper scripts
+├── gradlew.bat                         
+├── settings.gradle(.kts)                   # Gradle settings file to define a root project name and subprojects
+├── subproject-a
+│   ├── build.gradle(.kts)                  # Gradle build script for the subproject
+│   └── src                                 # Source code and/or additional files for the projects
+└── subproject-b
+    ├── build.gradle(.kts)              
+    └── src                             
+```
+ 
 ## Understanding Tasks
 - Gradle runs on tasks
 - plugin helps executes tasks
